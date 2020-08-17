@@ -1,274 +1,1 @@
-@import "bootstrap-grid.css";
-@import "bootstrap-reboot.css";
-@import "bootstrap.css";
-@import "../fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.css";
-
-body{
-  overflow-x: hidden;
-}
-header{
-  width: 100%;
-  height: 17vh;
-  position: relative;
-  padding-top: 70px;
-  z-index: 2 !important;
-  @media screen and (max-width: 992px){
-    padding-top: 15px;
-    background: rgba(52, 73, 94, 0.9) !important;
-  }
-  nav{
-    z-index: 2 !important;
-    @media screen and (max-width: 992px){
-      background: rgba(52, 73, 94, 0.9);
-    }
-    button{
-      i{
-        color: white !important;
-      }}
-  }
-  .nav-link{
-    color: white !important;
-    &:hover{
-      color: black !important;
-    }
-  }
-  .navbar-brand{
-    max-width: 150px;
-  }
-  .nav-item{
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    color: white !important;
-    &:after{
-      content: "//";
-      display: flex;
-      align-items: center;
-      position: absolute;
-      right: 0;
-      top: 8px;
-
-    }
-    &:last-of-type{
-      &:after{
-        content: "";
-        display: block;
-      }
-    }
-    @media screen and (max-width: 992px){
-      &:after{
-        content: "";
-        display: flex;
-        align-items: center;
-        position: absolute;
-        right: 0;
-        top: 8px;
-
-      }
-  }
-  }
-}
-.section_first_screen{
-  height: 100vh;
-  position: relative;
-  bottom: 20vh;
-  z-index: 0;
-  overflow-x: hidden;
-  .carousel{
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    .carousel-item{
-      height: 100%;
-    }
-    img{
-      object-fit: cover;
-      height: 100% !important;
-      width: 100% !important;
-    }
-  }
-  .image_block{
-    width: 100%;
-    height: 100vh;
-    background: rgba(52, 73, 94, 0.7);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
-  .carousel-indicators{
-      position: absolute;
-      bottom: 120px;
-  }
-  p{
-    font-size: 30px;
-    text-transform: uppercase;
-    color: white;
-    margin-bottom: 33px;
-    &:last-of-type{
-      margin-bottom: 97px;
-    }
-    @media screen and (max-width: 576px){
-      font-size: 15px;
-    }
-  }
-  h1{
-    font-size: 57px;
-    color: white;
-    margin-bottom: 33px;
-    @media screen and (max-width: 576px){
-      font-size: 29px;
-    }
-  }
-  a{
-    display: flex;
-    justify-content: center;
-    color: white;
-    background-color: transparent;
-    border: 3px white solid;
-    text-transform: uppercase;
-    padding: 16px 40px;
-    font-size: 16px;
-    &:hover{
-      background-color: #f5850f;
-      border-color: #f5850f;
-    }
-    @media screen and (max-width: 576px){
-      font-size: 12px;
-      padding: 16px 40px;
-    }
-  }
-}
-.section_about{
-  position: relative;
-  transform: rotate(-3deg);
-  background-color: white;
-  width: 200%;
-  right: 50%;
-  bottom: 40vh;
-  z-index: 0 !important;
-  overflow: hidden;
-  .rotate_gb{
-    padding-top: 120px;
-    padding-bottom: 150px;
-    width: 50%;
-    transform: rotate(3deg);
-    margin-left: 25% !important;
-  }
-  .main_content{
-    z-index: 3 !important;
-    top: 20vh;
-  .first_line{
-    margin-bottom: 150px;
-    p{
-      font-size: 16px;
-      line-height: 26px;
-      color: #595959;
-      text-transform: uppercase;
-      margin-bottom: 0;
-    }
-    span{
-      font-size: 30px;
-      text-transform: uppercase;
-      font-weight: bold;
-    }
-    .item{
-      border-left: #f5850f 6px solid;
-    }
-  }}
-  .second_line{
-    border-bottom: 2px solid #e6e6e6;
-    padding-bottom: 100px;
-    margin-bottom: 100px;
-    .our_story{
-      padding-right: 60px;
-      @media screen and (max-width: 576px){
-        padding-right: 15px;}
-    }
-    .picture {
-      display: flex;
-      border: #f5850f 3px solid;
-      border-radius: 50%;
-      justify-content: center;
-      align-items: center;
-      font-size: 40px;
-      width: 125px;
-      height: 125px;
-      margin-bottom: 30px;
-    }
-    .photo {
-      display: flex;
-      background-color: #e74c3c;
-      justify-content: center;
-      align-items: center;
-      font-size: 40px;
-      color: white;
-      height: 257px;
-      padding-left: 60px;
-
-    h2{
-      margin-bottom: 28px;
-      font-size: 20px;
-      font-weight: bold;
-      text-transform: uppercase;
-    }
-    p{
-      color: #737373;
-      font-size: 16px;
-      &:first-of-type{
-        color: #e74c3c;
-        font-size: 18px;
-        line-height: 28px;
-        margin-bottom: 40px;
-      }
-    }
-  }}
-  .third_line{
-    .picture {
-      display: flex;
-      border: #f5850f 3px solid;
-      border-radius: 50%;
-      justify-content: center;
-      align-items: center;
-      font-size: 40px;
-      width: 125px;
-      height: 125px;
-      margin-bottom: 30px;
-    }
-    .photo{
-      margin-bottom: 40px;
-    }
-    h2{
-      margin-bottom: 28px;
-      font-size: 20px;
-      font-weight: bold;
-      text-transform: uppercase;
-    }
-    p{
-      color: #737373;
-      font-size: 16px;
-      margin-bottom: 60px;
-    }
-    .our_skills{
-      padding-left: 60px;
-      @media screen and (max-width: 576px){
-        padding-left: 15px;
-      }
-    }
-    .design_PB{
-      background-color: #e6e6e6;
-      height: 10px;
-      width: 100%;
-      &:before{
-        content: "";
-        display: block;
-        height: 10px;
-        background-color: #f39c12;
-        width: 88%;
-      }
-    }
-  }
-}
+@import "bootstrap-grid.css";@import "bootstrap-reboot.css";@import "bootstrap.css";@import "../fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.css";body{  overflow-x: hidden;}header{  width: 100%;  height: 17vh;  position: relative;  padding-top: 70px;  z-index: 2 !important;  @media screen and (max-width: 992px){    padding-top: 15px;    background: rgba(52, 73, 94, 0.9) !important;  }  nav{    z-index: 2 !important;    @media screen and (max-width: 992px){      background: rgba(52, 73, 94, 0.9);    }    button{      i{        color: white !important;      }}  }  .nav-link{    color: white !important;    &:hover{      color: black !important;    }  }  .navbar-brand{    max-width: 150px;  }  .nav-item{    width: 100%;    position: relative;    display: flex;    justify-content: center;    color: white !important;    &:after{      content: "//";      display: flex;      align-items: center;      position: absolute;      right: 0;      top: 8px;    }    &:last-of-type{      &:after{        content: "";        display: block;      }    }    @media screen and (max-width: 992px){      &:after{        content: "";        display: flex;        align-items: center;        position: absolute;        right: 0;        top: 8px;      }  }  }}.section_first_screen{  height: 100vh;  position: relative;  bottom: 20vh;  z-index: 0;  overflow-x: hidden;  .carousel{    position: absolute;    width: 100%;    top: 0;    left: 0;    z-index: 0;    .carousel-item{      height: 100%;    }    img{      object-fit: cover;      height: 100% !important;      width: 100% !important;    }  }  .image_block{    width: 100%;    height: 100vh;    background: rgba(52, 73, 94, 0.7);    position: absolute;    top: 0;    left: 0;    z-index: 1;  }  .carousel-indicators{      position: absolute;      bottom: 120px;  }  p{    font-size: 30px;    text-transform: uppercase;    color: white;    margin-bottom: 33px;    &:last-of-type{      margin-bottom: 97px;    }    @media screen and (max-width: 576px){      font-size: 15px;    }  }  h1{    font-size: 57px;    color: white;    margin-bottom: 33px;    @media screen and (max-width: 576px){      font-size: 29px;    }  }  a{    display: flex;    justify-content: center;    color: white;    background-color: transparent;    border: 3px white solid;    text-transform: uppercase;    padding: 16px 40px;    font-size: 16px;    &:hover{      background-color: #f5850f;      border-color: #f5850f;    }    @media screen and (max-width: 576px){      font-size: 12px;      padding: 16px 40px;    }  }}.section_about{  position: relative;  transform: rotate(-3deg);  background-color: white;  width: 200%;  right: 50%;  bottom: 40vh;  z-index: 1 !important;  overflow: hidden;  .rotate_gb{    padding-top: 120px;    padding-bottom: 150px;    width: 50%;    transform: rotate(3deg);    margin-left: 25% !important;  }  .main_content{    z-index: 3 !important;    top: 20vh;  .first_line{    margin-bottom: 150px;    p{      font-size: 16px;      line-height: 26px;      color: #595959;      text-transform: uppercase;      margin-bottom: 0;    }    span{      font-size: 30px;      text-transform: uppercase;      font-weight: bold;    }    .item{      border-left: #f5850f 6px solid;    }  }}  .second_line{    border-bottom: 2px solid #e6e6e6;    padding-bottom: 100px;    margin-bottom: 100px;    .our_story{      padding-right: 60px;      @media screen and (max-width: 576px){        padding-right: 15px;}    }    .picture {      display: flex;      border: #f5850f 3px solid;      border-radius: 50%;      justify-content: center;      align-items: center;      font-size: 40px;      width: 125px;      height: 125px;      margin-bottom: 30px;    }    .photo {      display: flex;      background-color: #e74c3c;      justify-content: center;      align-items: center;      font-size: 40px;      color: white;      height: 257px;    h2{      margin-bottom: 28px;      font-size: 20px;      font-weight: bold;      text-transform: uppercase;    }    p{      color: #737373;      font-size: 16px;      &:first-of-type{        color: #e74c3c;        font-size: 18px;        line-height: 28px;        margin-bottom: 40px;      }    }  }}  .third_line{    .picture {      display: flex;      border: #f5850f 3px solid;      border-radius: 50%;      justify-content: center;      align-items: center;      font-size: 40px;      width: 125px;      height: 125px;      margin-bottom: 30px;    }    .photo{      margin-bottom: 40px;    }    .skills_p{    h2{      margin-bottom: 28px;      font-size: 20px;      font-weight: bold;      text-transform: uppercase;    }    p{      color: #737373;      font-size: 16px;      margin-bottom: 45px;    }}    .our_skills{      padding-left: 60px;      @media screen and (max-width: 576px){        padding-left: 15px;      }      .skills{        padding: 0 15px;        p{          text-transform: uppercase;          font-size: 16px;          font-weight: bold;          margin-bottom: 9px !important;        }        span{          text-transform: uppercase;          font-size: 16px;          color: #bfbfbf;        }      }    }    .design_PB{      background-color: #e6e6e6;      height: 10px;      width: 100%;      margin-bottom: 35px;      &:before{        content: "";        display: block;        height: 10px;        background-color: #f39c12;        width: 88%;      }    }    .devel_PB{      background-color: #e6e6e6;      height: 10px;      width: 100%;      margin-bottom: 35px;      &:before{        content: "";        display: block;        height: 10px;        background-color: #f39c12;        width: 76%;      }    }    .wordpress_PB{      background-color: #e6e6e6;      height: 10px;      width: 100%;      margin-bottom: 35px;      &:before{        content: "";        display: block;        height: 10px;        background-color: #f39c12;        width: 81%;      }    }    .drupal_PB{      background-color: #e6e6e6;      height: 10px;      width: 100%;      margin-bottom: 35px;      &:before{        content: "";        display: block;        height: 10px;        background-color: #f39c12;        width: 71%;      }    }  }}.comments{  background-image: url("../images/palm_bg.jpg");  background-size: cover;  height: 100vh;  background-repeat: no-repeat;  z-index: 0 !important;  position: relative;  bottom: 50vh;  color: white;  .bg_transp{    background-color: rgba(32, 37, 26, 0.8);    height: 100vh;    padding-top: 35vh;    @media screen and (max-width: 576px){      padding-top: 25vh;    }  }  h2{    font-weight: bold;    font-size: 50px;    margin-bottom: 62px;    @media screen and (max-width: 576px){      font-size: 30px;    }  }  span{    font-size: 20px;    text-transform: uppercase;    margin-bottom: 45px;    display: block;    &:before{      content: "";      display: block;      width: 36px;      height: 3px;      background-color: #f39c12;      position: relative;      left: 50%;      margin-left: -18px;      bottom: 15px;    }  }}.team{  position: relative;  transform: rotate(-3deg);  background-color: white;  width: 200%;  right: 50%;  bottom: 70vh;  height: 100vh;  z-index: 1 !important;  overflow: hidden;  .rotate_gb{    padding-top: 120px;    padding-bottom: 150px;    width: 50%;    transform: rotate(3deg);    margin-left: 25% !important;  }}
