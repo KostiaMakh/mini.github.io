@@ -2,24 +2,20 @@
 @import url(bootstrap-reboot.css);
 @import url(bootstrap.css);
 @import url(../fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.css);
-body {
-  overflow-x: hidden; }
-
 header {
-  width: 100%;
-  height: 17vh;
-  position: relative;
-  padding-top: 70px;
-  z-index: 2 !important; }
-  @media screen and (max-width: 992px) {
-    header {
-      padding-top: 15px;
-      background: rgba(52, 73, 94, 0.9) !important; } }
+  z-index: 2 !important;
+  position: relative; }
+  header .central_block_header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    padding-top: 70px; }
+    @media screen and (max-width: 992px) {
+      header .central_block_header {
+        padding-top: 15px;
+        background: rgba(52, 73, 94, 0.9) !important; } }
   header nav {
     z-index: 2 !important; }
-    @media screen and (max-width: 992px) {
-      header nav {
-        background: rgba(52, 73, 94, 0.9); } }
     header nav button i {
       color: white !important; }
   header .nav-link {
@@ -55,10 +51,18 @@ header {
 
 .section_first_screen {
   height: 100vh;
-  position: relative;
-  bottom: 20vh;
   z-index: 0;
-  overflow-x: hidden; }
+  overflow: hidden; }
+  .section_first_screen:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: white;
+    z-index: 1;
+    top: 95%;
+    transform-origin: left bottom;
+    transform: skewY(-3deg); }
   .section_first_screen .carousel {
     position: absolute;
     width: 100%;
@@ -66,14 +70,14 @@ header {
     left: 0;
     z-index: 0; }
     .section_first_screen .carousel .carousel-item {
-      height: 100%; }
+      height: 100vh; }
     .section_first_screen .carousel img {
       object-fit: cover;
       height: 100% !important;
       width: 100% !important; }
   .section_first_screen .image_block {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: rgba(52, 73, 94, 0.7);
     position: absolute;
     top: 0;
@@ -118,22 +122,15 @@ header {
 
 .section_about {
   position: relative;
-  transform: rotate(-3deg);
   background-color: white;
-  width: 200%;
-  right: 50%;
-  bottom: 40vh;
-  z-index: 1 !important;
+  bottom: 5vh;
+  padding-bottom: 40px;
+  z-index: 3 !important;
   overflow: hidden; }
-  .section_about .rotate_gb {
-    padding-top: 120px;
-    padding-bottom: 150px;
-    width: 50%;
-    transform: rotate(3deg);
-    margin-left: 25% !important; }
   .section_about .main_content {
+    position: relative;
     z-index: 3 !important;
-    top: 20vh; }
+    top: 5vh; }
     .section_about .main_content .first_line {
       margin-bottom: 150px; }
       .section_about .main_content .first_line p {
@@ -170,11 +167,11 @@ header {
     .section_about .second_line .photo {
       display: flex;
       background-color: #e74c3c;
-      justify-content: center;
       align-items: center;
       font-size: 40px;
       color: white;
-      height: 257px; }
+      width: 100%;
+      height: 260px; }
       .section_about .second_line .photo h2 {
         margin-bottom: 28px;
         font-size: 20px;
@@ -200,6 +197,8 @@ header {
     margin-bottom: 30px; }
   .section_about .third_line .photo {
     margin-bottom: 40px; }
+    .section_about .third_line .photo img {
+      width: 100%; }
   .section_about .third_line .skills_p h2 {
     margin-bottom: 28px;
     font-size: 20px;
@@ -273,19 +272,39 @@ header {
 .comments {
   background-image: url("../images/palm_bg.jpg");
   background-size: cover;
-  height: 100vh;
+  height: 70vh;
   background-repeat: no-repeat;
-  z-index: 0 !important;
+  z-index: 2 !important;
   position: relative;
-  bottom: 50vh;
+  bottom: 5vh;
   color: white; }
+  .comments:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: white;
+    z-index: 1;
+    bottom: 70%;
+    transform-origin: left bottom;
+    transform: skewY(-3deg); }
+  .comments:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: white;
+    z-index: 1;
+    top: 95%;
+    transform-origin: left bottom;
+    transform: skewY(-3deg); }
   .comments .bg_transp {
     background-color: rgba(32, 37, 26, 0.8);
     height: 100vh;
-    padding-top: 35vh; }
+    padding-top: 28vh; }
     @media screen and (max-width: 576px) {
       .comments .bg_transp {
-        padding-top: 25vh; } }
+        padding-top: 17vh; } }
   .comments h2 {
     font-weight: bold;
     font-size: 50px;
@@ -311,19 +330,91 @@ header {
 
 .team {
   position: relative;
-  transform: rotate(-3deg);
   background-color: white;
-  width: 200%;
-  right: 50%;
-  bottom: 70vh;
-  height: 100vh;
-  z-index: 1 !important;
-  overflow: hidden; }
-  .team .rotate_gb {
-    padding-top: 120px;
-    padding-bottom: 150px;
-    width: 50%;
-    transform: rotate(3deg);
-    margin-left: 25% !important; }
+  bottom: 5vh;
+  padding-bottom: 120px;
+  z-index: 3 !important; }
+  .team .main_content {
+    position: relative;
+    z-index: 3 !important;
+    top: 5vh; }
+    .team .main_content .first_line {
+      margin-bottom: 150px; }
+      .team .main_content .first_line p {
+        font-size: 16px;
+        line-height: 26px;
+        color: #595959;
+        text-transform: uppercase;
+        margin-bottom: 0; }
+      .team .main_content .first_line span {
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: bold; }
+      .team .main_content .first_line .item {
+        border-left: #f5850f 6px solid; }
+    .team .main_content .second_line .item {
+      padding: 30px 15px;
+      border-top: transparent 4px solid; }
+      .team .main_content .second_line .item:hover {
+        background-color: #f0f0f0;
+        border-top: #f5850f 4px solid; }
+        .team .main_content .second_line .item:hover span:after {
+          background-color: #e74c3c; }
+      .team .main_content .second_line .item .photo {
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: #e8f8f4;
+        height: 180px;
+        width: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 30px;
+        border: 3px solid #ededed; }
+        .team .main_content .second_line .item .photo i {
+          font-size: 60px;
+          color: white;
+          font-weight: normal; }
+      .team .main_content .second_line .item h3 {
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 8px; }
+      .team .main_content .second_line .item span {
+        font-size: 15px;
+        margin-bottom: 45px;
+        color: #999999;
+        display: block; }
+        .team .main_content .second_line .item span:after {
+          content: "";
+          display: block;
+          height: 3px;
+          background-color: #cccccc;
+          width: 20px;
+          position: relative;
+          left: 50%;
+          margin-left: -10px;
+          top: 12px; }
+      .team .main_content .second_line .item .social {
+        padding: 0 35px;
+        font-size: 19px;
+        text-decoration: none; }
+        .team .main_content .second_line .item .social a {
+          color: #999999; }
+        .team .main_content .second_line .item .social .TW:hover {
+          color: #00acee;
+          text-decoration: none; }
+        .team .main_content .second_line .item .social .FB:hover {
+          color: #3b5998;
+          text-decoration: none; }
+        .team .main_content .second_line .item .social .UN:hover {
+          color: #f5850f;
+          text-decoration: none; }
+        .team .main_content .second_line .item .social .Goo:hover {
+          color: red;
+          text-decoration: none; }
+        .team .main_content .second_line .item .social .LN:hover {
+          color: #0e76a8;
+          text-decoration: none; }
 
 /*# sourceMappingURL=style.css.map */
