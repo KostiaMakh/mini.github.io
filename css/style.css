@@ -2,6 +2,9 @@
 @import url(bootstrap-reboot.css);
 @import url(bootstrap.css);
 @import url(../fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.css);
+.transition_block {
+  transition: 0.6s; }
+
 header {
   z-index: 2 !important;
   position: relative; }
@@ -295,7 +298,7 @@ header {
 .team {
   position: relative;
   background-color: white;
-  bottom: 5vh;
+  bottom: 15vh;
   padding-bottom: 120px;
   z-index: 3 !important; }
   .team .main_content {
@@ -304,18 +307,18 @@ header {
     top: 5vh; }
     .team .main_content .first_line {
       margin-bottom: 150px; }
-      .team .main_content .first_line p {
-        font-size: 16px;
-        line-height: 26px;
-        color: #595959;
-        text-transform: uppercase;
-        margin-bottom: 0; }
+      .team .main_content .first_line .item {
+        border-left: #f5850f 6px solid; }
+        .team .main_content .first_line .item p {
+          font-size: 16px;
+          line-height: 26px;
+          color: #595959;
+          text-transform: uppercase;
+          margin-bottom: 0; }
       .team .main_content .first_line span {
         font-size: 30px;
         text-transform: uppercase;
         font-weight: bold; }
-      .team .main_content .first_line .item {
-        border-left: #f5850f 6px solid; }
     .team .main_content .second_line .item {
       padding: 30px 15px;
       border-top: transparent 4px solid; }
@@ -453,7 +456,7 @@ header {
 .service {
   position: relative;
   background-color: white;
-  bottom: 5vh;
+  bottom: 15vh;
   padding-bottom: 120px;
   z-index: 3 !important; }
   .service .main_content {
@@ -475,10 +478,11 @@ header {
       .service .main_content .first_line .item {
         border-left: #f5850f 6px solid; }
     .service .main_content .second_line {
-      border-bottom: 2px #e6e6e6 solid; }
-      .service .main_content .second_line .item {
-        padding: 0 15px 90px; }
-      .service .main_content .second_line .icon {
+      border-bottom: 2px #e6e6e6 solid;
+      margin-bottom: 110px; }
+    .service .main_content .second_line .item, .service .main_content .third_line .item {
+      padding: 0 15px 90px; }
+      .service .main_content .second_line .item .icon, .service .main_content .third_line .item .icon {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -489,20 +493,89 @@ header {
         color: black;
         font-size: 35px;
         margin: 0 auto 30px; }
-        .service .main_content .second_line .icon:hover {
+        .service .main_content .second_line .item .icon:hover, .service .main_content .third_line .item .icon:hover {
           color: white;
           background-color: #f5850f; }
-      .service .main_content .second_line h3 {
+      .service .main_content .second_line .item h3, .service .main_content .third_line .item h3 {
         font-weight: bold;
         text-transform: uppercase;
         margin: 0 0 26px;
         font-size: 17px;
         display: block; }
-      .service .main_content .second_line p {
+      .service .main_content .second_line .item p, .service .main_content .third_line .item p {
         font-size: 15px;
         color: #737373; }
-
-.transition_block {
-  transition: 0.6s; }
+    .service .main_content .proposal {
+      border: 3px solid #e6e6e6;
+      padding: 0;
+      box-sizing: border-box; }
+      .service .main_content .proposal:nth-child(2) {
+        border-left: none;
+        border-right: none; }
+      .service .main_content .proposal .proposal_name {
+        padding: 15px 15px;
+        margin-bottom: 0; }
+      .service .main_content .proposal h3 {
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        display: block;
+        margin: 0 auto 30px; }
+        .service .main_content .proposal h3:after {
+          content: "";
+          display: block;
+          width: 50px;
+          height: 2px;
+          background-color: #f5850f;
+          position: relative;
+          left: 50%;
+          top: 15px;
+          margin-left: -25px; }
+      .service .main_content .proposal span {
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+        margin: 0 auto; }
+      .service .main_content .proposal ul {
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 0; }
+      .service .main_content .proposal li {
+        padding: 17px 0;
+        border-top: 3px solid #e6e6e6; }
+        .service .main_content .proposal li:last-of-type {
+          border-bottom: 3px solid #e6e6e6; }
+        .service .main_content .proposal li:nth-child(odd) {
+          background-color: #fafafa; }
+      .service .main_content .proposal .button_block {
+        background-color: #fafafa;
+        padding: 30px 15px; }
+        .service .main_content .proposal .button_block a {
+          display: block;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 12px;
+          color: black;
+          padding: 11px 15px;
+          border: 3px solid #f5850f;
+          max-width: 130px;
+          margin: 0 auto; }
+      .service .main_content .proposal:hover {
+        transition: 600ms;
+        border-color: transparent;
+        z-index: 5 !important;
+        transform: scale(1.2); }
+        .service .main_content .proposal:hover .proposal_name {
+          background-color: #f5850f;
+          color: white; }
+          .service .main_content .proposal:hover .proposal_name h3:after {
+            background-color: white; }
+        .service .main_content .proposal:hover li:nth-child(odd) {
+          background-color: #e6e6e6; }
+        .service .main_content .proposal:hover li:nth-child(even) {
+          background-color: #f2f2f2; }
+        .service .main_content .proposal:hover .button_block {
+          background-color: #e6e6e6; }
 
 /*# sourceMappingURL=style.css.map */
